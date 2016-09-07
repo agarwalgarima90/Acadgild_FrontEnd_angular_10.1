@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="acadgild">
+	<head>
+		<title>Assignment 01</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+		<script>
+			var app = angular.module('acadgild', []);
+
+			app.controller('myctrl', function($scope) {
+				$scope.fname = "";
+				$scope.lname = "";
+			});
+		</script>
+	</head>
+	<body ng-controller="myctrl">
+		<form action="#">
+			First Name: <input type="text" placeholder="First Name" ng-model="fname"/><br>
+			Last Name: <input type="text" placeholder="Last Name" ng-model="lname"/><br>
+			<input type="submit" value="Submit">
+		</form>
+
+		<br>
+		<table border="1">
+			<tr>
+				<td>First Name</td>
+				<td>Last Name </td>
+			</tr>
+			<tr>
+				<td> {{fname}}</td>
+				<td> {{lname}}</td>
+			</tr>
+		</table>
+
+	</body>
+</html>
